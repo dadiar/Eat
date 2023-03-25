@@ -11,7 +11,7 @@ function updateTime() {
   
     // If the timeout time has already passed, set it to tomorrow
     if (now > timeout) {
-      timeout.setDate(timeout.getDate() + 2);
+      timeout.setDate(timeout.getDate() + 1);
     }
   
     // Calculate the time difference between now and the timeout time
