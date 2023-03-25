@@ -38,3 +38,54 @@ function updateTime() {
   
   // Call the updateTime function every second to update the display
   setInterval(updateTime, 1000);
+  
+  // Prayer times data for Glasgow
+const prayerTimes = [
+  { name: "Fajr", time: "5:19 AM" },
+  { name: "Sunrise", time: "6:44 AM" },
+  { name: "Dhuhr", time: "12:58 PM" },
+  { name: "Asr", time: "4:35 PM" },
+  { name: "Maghrib", time: "7:46 PM" },
+  { name: "Isha", time: "9:26 PM" },
+];
+
+// Function to update the popup with the current date and prayer times
+function updatePopup() {
+  // Get the current date and format it as "day month year"
+  const now = new Date();
+  const date = now.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  document.getElementById("date").textContent = date;
+
+  // Update the prayer times
+  const prayerTimesList = document.getElementById("prayer-times");
+  prayerTimesList.innerHTML = "";
+  for (const prayer of prayerTimes) {
+    const li = document.createElement("li");
+    li.textContent = `${prayer.name}: ${prayer.time}`;
+    prayerTimesList.appendChild(li);
+  }
+}
+
+// Update the popup when the page is loaded
+updatePopup();
+
+// Set an interval to update the popup every day at midnight
+setInterval(updatePopup, 1000 * 60 * 60 * 24);
+
+// Show the popup when the button is clicked
+const showPopupButton = document.getElementById("show-popup");
+const popupContainer = document.getElementById("popup-container");
+const closePopupButton = document.getElementById("close-popup");
+
+showPopupButton.addEventListener("click", () => {
+  popupContainer.classList.add("show");
+});
+
+// Close the popup when the close button is clicked
+closePopupButton.addEventListener("click", () => {
+  popupContainer.classList.remove("show");
+});
