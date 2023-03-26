@@ -45,7 +45,7 @@ const prayerTimes = [
   { name: "Sunrise", time: "6:44 AM" },
   { name: "Dhuhr", time: "12:58 PM" },
   { name: "Asr", time: "4:35 PM" },
-  { name: "Maghrib", time: "7:46 PM" },
+  { name: "Maghrib", time: "7:45 PM" },
   { name: "Isha", time: "9:26 PM" },
 ];
 
