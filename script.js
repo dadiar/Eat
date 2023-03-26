@@ -1,7 +1,7 @@
 function updateTime() {
     // Set the timeout time to 6:40 PM
-    const timeoutHour = 18; // 6 PM
-    const timeoutMinute = 46;
+    const timeoutHour = 19; // 6 PM
+    const timeoutMinute = 45;
   
     // Get the current date and time
     const now = new Date();
