@@ -1,7 +1,7 @@
 function updateTime() {
     // Set the timeout time to 6:40 PM
     const timeoutHour = 19; // 6 PM
-    const timeoutMinute = 45;
+    const timeoutMinute = 49;
   
     // Get the current date and time
     const now = new Date();
@@ -41,12 +41,12 @@ function updateTime() {
   
   // Prayer times data for Glasgow
 const prayerTimes = [
-  { name: "Fajr", time: "5:19 AM" },
-  { name: "Sunrise", time: "6:44 AM" },
-  { name: "Dhuhr", time: "12:58 PM" },
-  { name: "Asr", time: "4:35 PM" },
-  { name: "Maghrib", time: "7:45 PM" },
-  { name: "Isha", time: "9:26 PM" },
+  { name: "Fajr", time: "5:00 AM" },
+  { name: "Sunrise", time: "7:00 AM" },
+  { name: "Dhuhr", time: "1:29 PM" },
+  { name: "Asr", time: "4:44 PM" },
+  { name: "Maghrib", time: "7:49 PM" },
+  { name: "Isha", time: "9:35 PM" },
 ];
 
 // Function to update the popup with the current date and prayer times
