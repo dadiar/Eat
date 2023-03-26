@@ -89,3 +89,11 @@ showPopupButton.addEventListener("click", () => {
 closePopupButton.addEventListener("click", () => {
   popupContainer.classList.remove("show");
 });
+
+function playAlarm() {
+  const alarmSound = new Audio('s.mp3');
+  alarmSound.play();
+}
+
+const timeoutDuration = 10000; // 10 seconds
+const timeoutId = setTimeout(playAlarm, timeoutDuration);
